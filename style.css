@@ -7,15 +7,14 @@
 }
 
 body {
-    
     display: flex;
     flex-direction: column;
 }
 
 .first-section {
     height: 550px;
-    background-color: #1F2937;
-    padding: 0 180px;
+    background-image: linear-gradient(#1F2937, #173769);
+    padding: 0 120px;
     display: flex;
     flex-direction: column;
 }
@@ -24,12 +23,12 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
+    height: 90px;
 }
 
 .header-logo-text {
     font-weight: 900;
-    font-size: 24px;
+    font-size: 1.6rem;
     color: #F9FAF8;
 }
 
@@ -38,6 +37,15 @@ nav {
     gap: 30px;
     font-size: 18px;
     font-weight: 500;    
+}
+
+.nav-items a {
+    transition: 0.5s;
+}
+
+.nav-items a:hover {
+    color:white;
+    transform: translateY(-2px);
 }
 
 .main-header {
@@ -55,9 +63,23 @@ nav {
     margin-bottom: 10px;
 }
 
-.first-section button {
-    margin-top: 15px;
+button {
+    font-size: 18px;
+    color: white;
+    padding: 10px 35px;
+    border-radius: 8px;
+    background-color: #3882f6;
     border: none;
+    transition: 0.5s;
+}
+
+.btn-primary {
+    margin-top: 15px;
+    box-shadow: 1px 1px 10px rgb(26, 26, 26);
+}
+
+.btn-primary:hover {
+    background-color: #0663f8;
 }
 
 .first-section img {
@@ -67,8 +89,16 @@ nav {
     box-shadow: 2px 2px 50px #0f141b;
 }
 
+img {
+    transition: 1s;
+}
+
+img:hover {
+    transform: scale(1.02);
+}
+
 .second-section {
-    height: 450px;
+    height: auto;
     background-color: whitesmoke;
     padding: 0 180px;
     display: flex;
@@ -83,16 +113,17 @@ nav {
 }
 
 .card-items {
-    width: 100%;
     margin-top: 50px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.card-item{
-    width: 220px;
+.card-item {
     display: flex;
     flex-direction: column;
+    width: 220px;
+    margin: 50px 0px;
     align-items: center;
 }
 
@@ -112,7 +143,7 @@ nav {
 .third-section {
     height: 350px;
     background-color: #E5E7EB;
-    padding: 0 180px;
+    padding: 30px 180px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -153,10 +184,20 @@ nav {
 
 .box div h3{
     font-size: 28px;
+    margin-right: 300px;
 }
 
 .box div p {
     font-size: 18px;
+}
+
+.btn-secondary {
+    border: 2px solid white;
+}
+
+.btn-secondary:hover {
+    background-color: white;
+    color: #3882f6;
 }
 
 .footer {
@@ -167,11 +208,17 @@ nav {
     background-color: #0f141b;
 }
 
-button {
-    font-size: 18px;
-    color: whitesmoke;
-    padding: 10px 35px;
-    border-radius: 10px;
-    border: 2px solid whitesmoke;
-    background-color: #3882f6;
+.heart {
+    transition: 1s;
+}
+
+.heart:hover {
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 1250px) {
+    .first-section img {
+        width: 0;
+    }
+    
 }
